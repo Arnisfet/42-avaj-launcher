@@ -1,2 +1,3 @@
 javac -d objs src/*.java
-java -jar -cmf manifest.mf avaj-launcher.jar  -C objs/src .
+jar -cmf manifest.mf avaj-launcher.jar  -C objs/ .
+java -jar avaj-launcher.jar
