@@ -1,2 +1,2 @@
-main-class: src.Main
+main-class: src.com.github.arnisfet.avajlauncher.Simulator
 class-path: objs/
