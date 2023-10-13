@@ -23,15 +23,25 @@ public class Simulator {
 			CreateAircrafts();
 		} catch (SimulationException e) {
 			System.out.println(e.getMessage());
-			CreateAircrafts();
 			return ;
 			}
 	}
-	public static void CreateAircrafts() {
-		String info [];
-		weatherTower = new WeatherTower();
-		
-	}
+	public static void CreateAircrafts() throws SimulationException {
+		try {
+			String current_line;
+			String air_info [];
+			weatherTower = new WeatherTower();
+			while ((current_line = buf_reader.readLine()) != null) {
+				air_info = current_line.split("\\s+");
+				for (int i = 0; i != air_info.length; i++) {
+					System.out.println(air_info[i]);
+				}
+			}
+			buf_reader.close();
+			} catch (IOException e){
+				throw new SimulationException(e);
+			}
+}
 	/* Start of the simulation */
 	public static void InitSimulation (File file) throws SimulationException {
 		try {
