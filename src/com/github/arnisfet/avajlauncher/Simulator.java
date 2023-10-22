@@ -31,13 +31,18 @@ public class Simulator {
 			String current_line;
 			String air_info [];
 			weatherTower = new WeatherTower();
+			/* Aircrafts file parser */
+			System.out.println("----------------------- PARSE LOGS -----------------------");
 			while ((current_line = buf_reader.readLine()) != null) {
 				air_info = current_line.split("\\s+");
 				for (int i = 0; i != air_info.length; i++) {
 					System.out.println(air_info[i]);
 				}
 			}
+			System.out.println("----------------------- END OF PARSE LOGS -----------------------");
 			buf_reader.close();
+			/* End of aircrafts file parser */
+			
 			} catch (IOException e){
 				throw new SimulationException(e);
 			}

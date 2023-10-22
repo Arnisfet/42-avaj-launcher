@@ -1,4 +1,4 @@
-package src.com.github.arnisfet.avajlauncher.Aircrafts;
+package src.com.github.arnisfet.avajlauncher;
 
 public class Coordinates {
 	private int longitude;
